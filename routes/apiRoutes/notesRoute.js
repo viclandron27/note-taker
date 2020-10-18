@@ -11,7 +11,9 @@ router.get('/notes', (req, res) => {
 });
 router.post('/notes', (req, res) => {
     console.log("POST:", req.body)
-    const savedNotes = saveNote(req.body)
+    //const savedNotes = saveNote(req.body)
+    savedNotes.push(req.body)
+    //console.log(savedNotes)
     res.json(savedNotes)
     
 });
