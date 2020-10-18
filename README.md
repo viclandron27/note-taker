@@ -10,5 +10,7 @@ This application allows the user to create tasks and have them saved so they can
 ## Website
 https://protected-sierra-40157.herokuapp.com/
 
+![](screenshot.png)
+
 ## Contribution
 Made by Victoria Landron
