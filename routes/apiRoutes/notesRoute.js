@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const  savedNotes  = require('../../db/db.json');
+const fs = require('fs');
 
 router.get('/notes', (req, res) => {
     console.log("GET:", savedNotes)
@@ -15,6 +16,8 @@ router.post('/notes', (req, res) => {
     savedNotes.push(req.body)
     //console.log(savedNotes)
     res.json(savedNotes)
+
+    fs.writeFileSync("db.json", savedNotes);
     
 });
 router.delete('/notes/:id', (req, res) => {
