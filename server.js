@@ -1,4 +1,5 @@
 const htmlRoutes = require('./routes/htmlRoutes');
+const apiRoutes = require('./routes/apiRoutes/notesRoute');
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -15,6 +16,7 @@ app.use(express.json());
 
 app.use('/', htmlRoutes);
 app.use('/notes', htmlRoutes)
+app.use('/api', apiRoutes)
 
 app.use(express.static('public'));
 
